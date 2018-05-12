@@ -42,7 +42,6 @@ public class RegProc extends HttpServlet {
 			}
 		} catch (SQLException e) {
 			System.err.println("数据库查找失败");
-			e.printStackTrace();
 		}
 
 		// 无冲突，存入

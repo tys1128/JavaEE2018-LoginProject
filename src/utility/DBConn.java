@@ -9,7 +9,7 @@ import java.sql.Statement;
 public class DBConn {
 	static Connection conn;
 	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-	static final String DB_URL = "jdbc:mysql://localhost:32775/school";
+	static final String DB_URL = "jdbc:mysql://localhost:3306/school";
 	static final String USER = "root";
 	static final String PASS = "123456";
 
@@ -21,12 +21,8 @@ public class DBConn {
 		}
 	}
 
-	public static Connection getConn() {
-		try {
-			conn = DriverManager.getConnection(DB_URL, USER, PASS);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+	public static Connection getConn() throws SQLException {
+		conn = DriverManager.getConnection(DB_URL, USER, PASS);
 		return conn;
 	}
 
