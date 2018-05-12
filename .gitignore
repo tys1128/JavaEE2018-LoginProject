@@ -1,4 +1,5 @@
 /.settings/
+/.settings
 /build/
 .project
 .tern-project
